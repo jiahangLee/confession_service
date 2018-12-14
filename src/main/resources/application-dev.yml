@@ -1,7 +1,12 @@
 server:
   port: 8001
   servlet:
-    context-path: /dev
+#    context-path: /confession
 girl:
     cupSize: B
     age: 18
+system-params:
+    upload: C:/Users/Administrator/Desktop/upload
+    uploadplus: C:/Users/Administrator/Desktop/uploadplus
+    web-url: http://localhost:8001/confession/
+    web-url2: localhost:8002

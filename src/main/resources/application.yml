@@ -12,9 +12,9 @@ spring:
     druid:
           filters: stat
           driver-class-name: com.mysql.jdbc.Driver
-          url: jdbc:mysql://127.0.0.1:3306/20181009?useUnicode=true&characterEncoding=utf-8&useSSL=false&amp;useOldAliasMetadataBehavior=true
+          url: jdbc:mysql://127.0.0.1:3306/confession?useUnicode=true&characterEncoding=utf-8&useSSL=false&amp;useOldAliasMetadataBehavior=true
           username: root
-          password: 123456
+          password:
           initial-size: 1
           min-idle: 1
           max-active: 20
@@ -27,7 +27,7 @@ spring:
           pool-prepared-statements: false
           max-pool-prepared-statement-per-connection-size: 20
 mybatis:
-  mapper-locations: classpath:mapper/UserMapper.xml
+  mapper-locations: classpath:mapper/UserMapper.xml,classpath:mapper/ConfessionMapper.xml
   #注意：一定要对应mapper映射xml文件的所在路径
   type-aliases-package: com.jiahanglee.journey.entity  # 注意：对应实体类的路径
 

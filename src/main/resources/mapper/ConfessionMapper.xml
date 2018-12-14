@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.jiahanglee.journey.dao.ConfessionDao">
+    <sql id="BASE_TABLE">
+        confession
+    </sql>
+
+    <sql id="BASE_COLUMN">
+        id,name,detail,love_time,together,create_time,update_time
+    </sql>
+
+    <select id="selectConfession" resultType="com.jiahanglee.journey.entity.Confession">
+        SELECT
+        id,name,detail,love_time loveTime,together,create_time createTime,update_time updateTime
+        FROM
+        <include refid="BASE_TABLE"/>
+        where id = #{id}
+    </select>
+    <insert id="createConfession" useGeneratedKeys="true" keyProperty="id" parameterType="com.jiahanglee.journey.entity.Confession">
+        INSERT INTO
+        confession(name,detail,love_time,create_time,update_time)
+        values(#{name, jdbcType=VARCHAR},#{detail, jdbcType=VARCHAR},#{loveTime, jdbcType=DATE},CURRENT_TIMESTAMP ,CURRENT_TIMESTAMP)
+    </insert>
+
+</mapper>
