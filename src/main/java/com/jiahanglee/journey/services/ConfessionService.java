@@ -3,6 +3,8 @@ package com.jiahanglee.journey.services;
 import com.github.pagehelper.PageInfo;
 import com.jiahanglee.journey.entity.Confession;
 import com.jiahanglee.journey.entity.User;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 /**
  * code is far away from bug with the animal protecting
